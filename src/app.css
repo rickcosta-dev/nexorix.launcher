@@ -1,0 +1,46 @@
+/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0f14;
+  --surface:   #13161e;
+  --elevated:  #1a1d28;
+  --border:    #252836;
+  --accent:    #7c5cff;
+  --accent-h:  #9b7fff;
+  --accent-d:  rgba(124,92,255,0.15);
+  --text:      #eaedf5;
+  --text-dim:  #8b92a8;
+  --text-muted:#4a5068;
+  --green:     #38c96b;
+  --red:       #f44;
+  --max-w:     1400px;
+  --pad:       clamp(1.5rem, 4vw, 4rem);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Container helper ─────────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+::selection { background: rgba(124,92,255,0.35); color: #fff; }
